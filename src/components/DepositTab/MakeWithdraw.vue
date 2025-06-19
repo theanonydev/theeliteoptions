@@ -1,0 +1,142 @@
+<template>
+  <section class="w-full flex flex-col h-screen bg-[#151424]">
+    <dialog-model
+      :message="alert.message"
+      :showAlert="alert.message"
+      :type="alert.type"
+    ></dialog-model>
+    <div
+      class="w-full bg-primaryDark2 flex justify-between py-4 px-6 items-center"
+    >
+      <the-side-bar></the-side-bar>
+      <h1 class="text-textLight1 text-lg w-full text-center">Withdraw</h1>
+    </div>
+    <section class="flex-1 py-6 px-4">
+      <form class="flex flex-col gap-4" @submit.prevent="submit">
+        <div class="bg-primaryDark2 p-2 text-white flex items-center gap-1">
+          <img
+            src="https://imgs.search.brave.com/CbnuV0tip9Iy-AfaUnx18Aol-pxluPbRTLXrOjRqNJo/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWdz/LnNlYXJjaC5icmF2/ZS5jb20vekVZNzZj/Ylc4S2dCWmdBQTcw/NDBPdTFCLU96OTky/eGFFdnV6NWtUbVRo/TS9yczpmaXQ6NTYw/OjMyMDoxOjAvZzpj/ZS9hSFIwY0hNNkx5/OWpiMjUwL1pXNTBM/V0Z3YVM1amFHRnUv/WjJWdWIzY3VhVzh2/TDNWdy9iRzloWkhN/dmRYTmtkR1Z5L1l6/SXdYelZoWlRJeE5q/RTQvWVdFdWMzWm4.jpeg"
+            alt="icon"
+            class="w-5 h-5"
+          />
+          <span>USDT ERC20</span>
+        </div>
+        <div>
+          <input
+            type="number"
+            name="amount"
+            id="amount"
+            placeholder="$"
+            v-model="amount"
+            class="w-full placeholder:text-gray-300 bg-primaryDark2 p-2 text-sm text-white outline-none active:border-blue-500 focus:border-blue-500 border border-primaryDark2 rounded-md"
+            required
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            name=""
+            id=""
+            v-model="address"
+            placeholder="Address"
+            class="w-full placeholder:text-gray-300 bg-primaryDark2 p-2 text-sm text-white outline-none active:border-blue-500 focus:border-blue-500 border border-primaryDark2 rounded-md"
+            required
+          />
+        </div>
+
+        <button
+          type="submit"
+          class="text-lg bg-green-700 text-white font-semibold rounded-lg px-4 py-2"
+        >
+          NEW REQUEST
+        </button>
+      </form>
+    </section>
+    <div
+      class="bg-primaryDark2 border-t border-borderColor flex justify-around py-3"
+    >
+      <router-link to="/deposit"
+        ><div class="flex flex-col items-center text-iconColor">
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-[22px] h-[22px] fill-current stroke-current"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M17.12 9.88a2.997 2.997 0 1 0-4.24 4.24a2.997 2.997 0 1 0 4.24-4.24M7 6v12h16V6zm14 8c-.53 0-1.04.21-1.41.59c-.38.37-.59.88-.59 1.41h-8c0-.53-.21-1.04-.59-1.41c-.37-.38-.88-.59-1.41-.59v-4c.53 0 1.04-.21 1.41-.59c.38-.37.59-.88.59-1.41h8c0 .53.21 1.04.59 1.41c.37.38.88.59 1.41.59zM5 8H3c-.55 0-1-.45-1-1s.45-1 1-1h2zm0 5H2c-.55 0-1-.45-1-1s.45-1 1-1h3zm0 5H1c-.552 0-1-.45-1-1s.448-1 1-1h4z"
+                stroke-width="0.5"
+              />
+            </svg>
+          </div>
+          <h2 class="text-[0.82rem]">Deposit</h2>
+        </div></router-link
+      >
+
+      <router-link to="/deposit/history">
+        <div class="flex flex-col items-center text-iconColor">
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-[22px] h-[22px] fill-current stroke-current"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M10.5 10a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zM1 5.5A2.5 2.5 0 0 1 3.5 3h9A2.5 2.5 0 0 1 15 5.5v5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 10.5zM14 6v-.5A1.5 1.5 0 0 0 12.5 4h-9A1.5 1.5 0 0 0 2 5.5V6zM2 7v3.5A1.5 1.5 0 0 0 3.5 12h9a1.5 1.5 0 0 0 1.5-1.5V7z"
+                stroke-width="0.5"
+              />
+            </svg>
+          </div>
+          <h2 class="text-[0.82rem]">Payment history</h2>
+        </div></router-link
+      >
+      <router-link to="/withdraw">
+        <div class="flex flex-col items-center text-white">
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-[22px] h-[22px] fill-current stroke-current"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M22 2H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h3v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9h3a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1M7 20v-2a2 2 0 0 1 2 2Zm10 0h-2a2 2 0 0 1 2-2Zm0-4a4 4 0 0 0-4 4h-2a4 4 0 0 0-4-4V8h10Zm4-6h-2V7a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1v3H3V4h18Zm-9 5a3 3 0 1 0-3-3a3 3 0 0 0 3 3m0-4a1 1 0 1 1-1 1a1 1 0 0 1 1-1"
+                stroke-width="0.2"
+              />
+            </svg>
+          </div>
+          <h2 class="text-[0.82rem]">Withdrawal</h2>
+        </div></router-link
+      >
+    </div>
+  </section>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      alert: {
+        type: "",
+        message: "",
+      },
+      amount: null,
+      address: null,
+    };
+  },
+  methods: {
+    submit() {
+      this.showAlert("success", "WIthdrawal Successful");
+    },
+
+    showAlert(type, message) {
+      this.alert.type = type;
+      this.alert.message = message;
+      setTimeout(() => {
+        this.alert.message = "";
+      }, 1000);
+    },
+  },
+};
+</script>
+
+<style></style>

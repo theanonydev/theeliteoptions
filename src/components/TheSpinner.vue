@@ -1,0 +1,48 @@
+<template>
+  <div class="center"><div class="spinner"></div></div>
+</template>
+
+<style scoped>
+.center {
+  width: 100px;
+  height: 100px;
+
+  margin: auto;
+  position: absolute;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+}
+.spinner {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  padding: 1.1px;
+  background: conic-gradient(#0000 10%, #f44336) content-box;
+  -webkit-mask: repeating-conic-gradient(
+      #0000 0deg,
+      #000 1deg 20deg,
+      #0000 21deg 36deg
+    ),
+    radial-gradient(
+      farthest-side,
+      #0000 calc(100% - 9px),
+      #000 calc(100% - 9px)
+    );
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+  animation: spinner-d55elj 1s infinite steps(10);
+}
+
+@keyframes spinner-d55elj {
+  to {
+    transform: rotate(1turn);
+  }
+}
+</style>
