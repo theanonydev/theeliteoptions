@@ -6,7 +6,9 @@
         class="flex justify-center items-center flex-col py-[6rem] gap-3 bg-primary"
       >
         <div>
-          <h1 class="text-[5rem] font-bold">Get in touch</h1>
+          <h1 class="text-[5rem] font-bold max-sm:text-[2.3rem]">
+            Get in touch
+          </h1>
         </div>
         <div>
           <h3>
@@ -15,9 +17,13 @@
           </h3>
         </div>
       </menu>
-      <main class="grid grid-cols-2 py-20 w-[80%] mx-auto gap-5">
-        <div class="w-[90%] flex flex-col gap-6">
-          <h1 class="font-bold text-5xl leading-[3rem]">
+      <main
+        class="grid grid-cols-2 py-20 w-[80%] max-sm:grid-cols-1 mx-auto gap-5"
+      >
+        <div class="w-[90%] max-sm:w-full flex flex-col gap-6">
+          <h1
+            class="font-bold text-5xl max-sm:text-center max-sm:text-3xl leading-[3rem]"
+          >
             Have any questions? We will talk to you sincerely anytime
           </h1>
           <p class="leading-[2rem] text-[0.9rem]">
@@ -25,7 +31,7 @@
             out the form and our team will get back to you within 24 hours.
           </p>
         </div>
-        <form class="bg-white rounded-md p-14 flex flex-col gap-5">
+        <form class="bg-white rounded-md p-14 max-sm:p-5 flex flex-col gap-5">
           <div class="flex gap-3 flex-col">
             <label for="email" class="font-bold">Your name</label>
             <input
@@ -79,7 +85,25 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.async = true;
+    script.innerHTML = `
+      var _smartsupp = _smartsupp || {};
+      _smartsupp.key = "3f99eb2968d380f6bcd02502632f90030e052ff6";
+      window.smartsupp||(function(d) {
+        var s,c,o=smartsupp=function(){ o._.push(arguments) };o._=[];
+        s=d.getElementsByTagName('script')[0];
+        c=d.createElement('script');c.type='text/javascript';c.charset='utf-8';c.async=true;
+        c.src='https://www.smartsuppchat.com/loader.js?';
+        s.parentNode.insertBefore(c,s);
+      })(document);
+    `;
+    document.body.appendChild(script);
+  },
+};
 </script>
 
 <style scoped></style>

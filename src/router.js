@@ -15,6 +15,7 @@ import PaymentSection from "./components/views/PaymentSection.vue";
 import KycPage from "./components/views/KycPage.vue";
 import DepositHistory from "./components/DepositTab/DepositHistory.vue";
 import MakeWithdraw from "./components/DepositTab/MakeWithdraw.vue";
+import AboutUs from "./components/AboutUs.vue";
 const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -25,6 +26,10 @@ const router = createRouter({
     {
       path: "/contact-us",
       component: ContactUs,
+    },
+    {
+      path: "/about-us",
+      component: AboutUs,
     },
     {
       path: "/signin",

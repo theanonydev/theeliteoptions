@@ -86,7 +86,25 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.async = true;
+    script.innerHTML = `
+      var _smartsupp = _smartsupp || {};
+      _smartsupp.key = "3f99eb2968d380f6bcd02502632f90030e052ff6";
+      window.smartsupp||(function(d) {
+        var s,c,o=smartsupp=function(){ o._.push(arguments) };o._=[];
+        s=d.getElementsByTagName('script')[0];
+        c=d.createElement('script');c.type='text/javascript';c.charset='utf-8';c.async=true;
+        c.src='https://www.smartsuppchat.com/loader.js?';
+        s.parentNode.insertBefore(c,s);
+      })(document);
+    `;
+    document.body.appendChild(script);
+  },
+};
 </script>
 
 <style scoped></style>

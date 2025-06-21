@@ -164,27 +164,19 @@
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="w-[21px] h-[21px] flex items-center justify-center stroke-white"
-                viewBox="0 0 21 21"
+                viewBox="0 0 2048 2048"
               >
-                <g
-                  fill="none"
-                  fill-rule="evenodd"
+                <path
+                  fill="#fff"
+                  d="m1845 1024l124 155q18 23 28 50t10 57t-9 57t-26 49t-41 38t-52 24l-191 53q2 51 5 103t4 104q0 36-13 67t-37 54t-55 37t-68 14q-31 0-61-11l-185-70l-109 165q-24 37-62 57t-83 21q-44 0-82-20t-63-58l-109-165l-185 70q-30 11-61 11q-36 0-67-13t-55-37t-37-55t-14-67q0-52 3-104t6-103l-191-53q-29-8-52-24t-40-38t-26-49t-10-57q0-29 10-56t28-51l124-155L79 869q-38-47-38-107q0-30 9-57t26-49t40-38t53-24l191-53q-2-51-5-103t-4-104q0-36 13-67t37-54t55-37t68-14q31 0 61 11l185 70L879 78q24-37 62-57t83-21q44 0 82 20t63 58l109 165l185-70q30-11 61-11q36 0 67 13t55 37t37 55t14 67q0 52-3 104t-6 103l191 53q28 8 52 24t40 38t26 49t10 57q0 60-38 107zm-949 369l569-568l-114-114l-455 456l-199-200l-114 114z"
+                  stroke-width="51"
                   stroke="#fff"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  transform="translate(4 2)"
-                  stroke-width="1.4"
-                >
-                  <path
-                    d="m6.5 16.54l.631-.711Q8.205 14.6 9.064 13.49l.473-.624Q12.5 8.875 12.5 6.533C12.5 3.201 9.814.5 6.5.5s-6 2.701-6 6.033q0 2.342 2.963 6.334l.473.624a55 55 0 0 0 2.564 3.05"
-                  />
-                  <circle cx="6.5" cy="6.5" r="2.5" />
-                </g>
+                />
               </svg>
             </div>
             <div>
-              <p class="text-[0.85rem]">Country</p>
-              <p class="text-[0.89rem] font-medium">NG</p>
+              <p class="text-[0.85rem]">Verified</p>
+              <p class="text-[0.89rem] font-medium">Yes</p>
             </div>
           </div>
         </div>

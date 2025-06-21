@@ -511,6 +511,9 @@
       </div>
     </div>
     <the-footer></the-footer>
+    <div>
+      <div class="gtranslate_wrapper"></div>
+    </div>
   </section>
 </template>
 
@@ -521,6 +524,48 @@ export default {
   components: {
     TheHeader,
     TheFooter,
+  },
+
+  created() {
+    // Load the script only if it hasn't been added
+    if (!document.getElementById("gtranslate-script")) {
+      // Create settings script
+      const settingsScript = document.createElement("script");
+      settingsScript.innerHTML = `
+        window.gtranslateSettings = {
+          default_language: "en",
+          detect_browser_language: true,
+          wrapper_selector: ".gtranslate_wrapper",
+          alt_flags: { en: "usa" }
+        };
+      `;
+      document.head.appendChild(settingsScript);
+
+      // Create widget loader script
+      const script = document.createElement("script");
+      script.id = "gtranslate-script";
+      script.src = "https://cdn.gtranslate.net/widgets/latest/float.js";
+      script.defer = true;
+      document.body.appendChild(script);
+    }
+  },
+
+  mounted() {
+    const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.async = true;
+    script.innerHTML = `
+      var _smartsupp = _smartsupp || {};
+      _smartsupp.key = "3f99eb2968d380f6bcd02502632f90030e052ff6";
+      window.smartsupp||(function(d) {
+        var s,c,o=smartsupp=function(){ o._.push(arguments) };o._=[];
+        s=d.getElementsByTagName('script')[0];
+        c=d.createElement('script');c.type='text/javascript';c.charset='utf-8';c.async=true;
+        c.src='https://www.smartsuppchat.com/loader.js?';
+        s.parentNode.insertBefore(c,s);
+      })(document);
+    `;
+    document.body.appendChild(script);
   },
 };
 </script>
