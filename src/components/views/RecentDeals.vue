@@ -3,7 +3,7 @@
     <h1 class="font-light">Recent deals</h1>
 
     <div class="h-screen flex flex-col gap-4">
-      <section class="items-center justify-center h-[50%] hidden">
+      <section class="items-center justify-center h-[50%] flex">
         <div class="flex flex-col items-center gap-3">
           <div>
             <svg
@@ -31,7 +31,7 @@
           </router-link>
         </div>
       </section>
-      <section class="font-light">
+      <section class="font-light hidden">
         <div>
           <h1 class="py-3 text-[0.83rem] text-gray-200 px-4">Opened deals</h1>
           <div class="flex gap-3 items-center border-y border-borderColor px-2">
@@ -69,7 +69,7 @@
           </div>
         </div>
       </section>
-      <section class="font-light">
+      <section class="font-light hidden">
         <div>
           <h1
             class="py-2 text-[0.83rem] px-4 border-b border-borderColor text-gray-200"
