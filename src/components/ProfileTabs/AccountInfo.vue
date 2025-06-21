@@ -176,7 +176,7 @@
             </div>
             <div>
               <p class="text-[0.85rem]">Verified</p>
-              <p class="text-[0.89rem] font-medium">Yes</p>
+              <p class="text-[0.89rem] font-medium">No</p>
             </div>
           </div>
         </div>
