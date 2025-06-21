@@ -292,7 +292,7 @@
         </div>
       </div>
       <div
-        class="fixed bottom-0 left-0 w-full border-t border-borderColor bg-primaryDark2 grid grid-cols-2 gap-2 px-1 pt-2 pb-3 items-center z-30"
+        class="fixed bottom-0 left-0 w-full border-t border-borderColor bg-primaryDark2 grid grid-cols-2 gap-2 px-1 pt-2 pb-1 items-center z-30"
       >
         <div class="flex items-center justify-center gap-6">
           <button
