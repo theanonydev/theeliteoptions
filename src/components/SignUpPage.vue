@@ -167,7 +167,7 @@ export default {
           createdAt: new Date().toISOString(),
         });
 
-        this.$router.replace("/app");
+        this.$router.replace("/app/account/verification");
       } catch (error) {
         console.error("Error registering user:", error);
         if (this.password.length < 6) {

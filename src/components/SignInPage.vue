@@ -97,7 +97,7 @@ export default {
           this.showAlert("success", "success");
 
           setTimeout(() => {
-            this.$router.replace("/app/account/verification");
+            this.$router.replace("/app");
           }, 1000);
 
           // ...
