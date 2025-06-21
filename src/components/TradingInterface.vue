@@ -393,7 +393,7 @@
             </svg>
           </button>
         </div>
-        <router-link to="/deposit"
+        <router-link to="/deposit" class="w-full"
           ><button
             @click="placeTrade('sell')"
             class="text-red-400 border rounded-xl border-borderColor font-bold text-sm bg-transparent py-3"
@@ -401,7 +401,7 @@
             SELL
           </button></router-link
         >
-        <router-link to="/deposit"
+        <router-link to="/deposit" class="w-full"
           ><button
             @click="placeTrade('buy')"
             class="text-green-400 rounded-xl border border-borderColor font-bold text-sm bg-transparent py-3"
