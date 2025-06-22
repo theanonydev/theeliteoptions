@@ -128,10 +128,10 @@ export default {
     async uploadToCloudinary(file) {
       const formData = new FormData();
       formData.append("file", file);
-      formData.append("upload_preset", "options"); // replace here
+      formData.append("upload_preset", "Upload"); // replace here
 
       const response = await fetch(
-        "https://api.cloudinary.com/v1_1/dztxe4csi/image/upload", // replace here
+        "https://api.cloudinary.com/v1_1/daffpzpcl/image/upload", // replace here
         {
           method: "POST",
           body: formData,

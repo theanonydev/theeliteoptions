@@ -267,16 +267,14 @@
 
         <div class="flex border border-gray-700 bg-primaryDark2 rounded-lg">
           <button
-            @click="placeTrade('sell')"
             class="text-red-400 border-r border-gray-700 font-bold text-lg bg-transparent px-12 py-4"
           >
-            SELL
+            <router-link to="/deposit">SELL</router-link>
           </button>
           <button
-            @click="placeTrade('buy')"
             class="text-green-400 rounded-xl font-bold text-lg bg-transparent px-12 py-4"
           >
-            BUY
+            <router-link to="/deposit">SELL</router-link>
           </button>
         </div>
 
@@ -292,7 +290,7 @@
         </div>
       </div>
       <div
-        class="fixed bottom-0 left-0 w-full border-t border-borderColor bg-primaryDark2 grid grid-cols-2 gap-2 px-1 pt-2 pb-1 items-center z-30"
+        class="fixed bottom-0 left-0 w-full border-t border-borderColor bg-primaryDark2 max-sm:grid hidden grid-cols-2 gap-2 px-1 pt-2 pb-1 items-center z-30"
       >
         <div class="flex items-center justify-center gap-6">
           <button

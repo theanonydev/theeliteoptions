@@ -6,7 +6,7 @@
       <the-side-bar></the-side-bar>
       <h1 class="text-textLight1 text-lg w-full text-center">Deposit</h1>
     </div>
-    <article class="flex-1 py-6 px-4">
+    <article class="flex-1 flex flex-col gap-3 py-6 px-4">
       <router-link to="/amount">
         <div class="flex items-center text-white bg-primaryDark2 rounded-md">
           <div>
@@ -14,6 +14,20 @@
           </div>
           <div class="pl-5 text-[0.94rem]">
             <p>USDT, TON, Bitcoin, Ethereum</p>
+          </div>
+        </div></router-link
+      >
+      <router-link to="/online-payment">
+        <div class="flex items-center text-white bg-primaryDark2 rounded-md">
+          <div>
+            <img
+              src="https://imgs.search.brave.com/Y2vWDGSwGkDVzmrKj03YdMuYyW92UV3r4wKWfVmlpy4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvOTQ4/NTYxNTQvcGhvdG8v/dW5pdGVkLXN0YXRl/cy12aXNhLWluYy1j/cmVkaXQtYW5kLWRl/Yml0LWNhcmRzLWFy/ZS1hcnJhbmdlZC1m/b3ItYS1waG90by1p/bi13YXNoaW5ndG9u/LWQtYy11LXMtb24u/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PVRMeXRnSFB4R2Iz/aXVNSE5yOUpJUlhv/UGVIMklXeWM0d2NJ/UEZCZmp1VXc9"
+              class="h-[40px] w-[60px]"
+              alt=""
+            />
+          </div>
+          <div class="pl-5 text-[0.94rem]">
+            <p>VISA, Mastercard, Credit Card</p>
           </div>
         </div></router-link
       >
