@@ -60,7 +60,7 @@
                 </svg>
               </div>
               <div class="flex flex-col gap-[0.1rem]">
-                <h2>$0.00</h2>
+                <h2>${{ balance }}.00</h2>
                 <a class="text-[0.8rem] no-underline">165-011-34</a>
                 <h3
                   class="py-1 px-2 text-[0.7rem] rounded-md bg-yellow-500 w-fit text-center"
@@ -267,6 +267,9 @@ export default {
     };
   },
   computed: {
+    balance() {
+      return this.$store.getters.balance;
+    },
     tradeStyle() {
       return this.activeTab === "app" ? "active" : null;
     },

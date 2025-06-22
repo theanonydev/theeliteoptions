@@ -8,6 +8,7 @@ export default createStore({
   state() {
     return {
       user: null,
+      balance: null,
       loading: true,
       pendingDeposits: [],
     };
@@ -26,6 +27,10 @@ export default createStore({
     setUserData(state, userData) {
       state.user = { ...state.user, ...userData };
     },
+    balData(state, balData) {
+      console.log(balData);
+      state.balance = balData;
+    },
     setPendingDeposits(state, deposits) {
       state.pendingDeposits = deposits;
     },
@@ -42,6 +47,18 @@ export default createStore({
     setUser({ commit }, user) {
       commit("setUser", user);
     },
+
+    fetchBalance({ commit, state }) {
+      const user = state.user;
+      if (user) {
+        const balRef = ref(db, `users/${user.uid}/accountBalance`);
+        onValue(balRef, (snapshot) => {
+          const balData = snapshot.val();
+
+          commit("balData", balData);
+        });
+      }
+    },
     fetchUser({ commit, state }) {
       const user = state.user;
       if (user) {
@@ -52,6 +69,7 @@ export default createStore({
           commit("setUserData", userData);
         });
         const depositsRef = ref(db, `users/${user.uid}/pendingDeposits`);
+
         onValue(depositsRef, (snapshot) => {
           const deposits = [];
           snapshot.forEach((childSnapshot) => {
@@ -91,5 +109,6 @@ export default createStore({
   },
   getters: {
     user: (state) => state.user,
+    balance: (state) => state.balance,
   },
 });

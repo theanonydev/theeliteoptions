@@ -7,7 +7,7 @@
       <the-side-bar></the-side-bar>
       <div class="flex gap-7">
         <div class="py-2 text-center rounded-lg">
-          <h1 class="text-[#FFA25C] text-[0.86rem]">$0.00</h1>
+          <h1 class="text-[#FFA25C] text-[0.86rem]">${{ balance }}.00</h1>
         </div>
         <div class="flex items-center px-6 bg-[#2977BE] rounded-lg">
           <h1 class="text-[0.86rem]">Finances</h1>
@@ -69,6 +69,11 @@ import RecentDeals from "./views/RecentDeals.vue";
 export default {
   components: {
     RecentDeals,
+  },
+  computed: {
+    balance() {
+      return this.$store.getters.balance;
+    },
   },
   data() {
     return {

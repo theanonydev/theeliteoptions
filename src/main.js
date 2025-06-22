@@ -17,6 +17,7 @@ let app;
 
 authChange(auth, (user) => {
   store.dispatch("setUser", user);
+  store.dispatch("fetchBalance", user);
   if (!app) {
     app = createApp(App);
     app.use(store);

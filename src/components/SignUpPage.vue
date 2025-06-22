@@ -164,10 +164,11 @@ export default {
           deposit: 0,
           withdrawal: 0,
           Fullname: user.displayName,
+          kyc: "pending",
           createdAt: new Date().toISOString(),
         });
 
-        this.$router.replace("/app/account/verification");
+        this.$router.replace("/kyc");
       } catch (error) {
         console.error("Error registering user:", error);
         if (this.password.length < 6) {
